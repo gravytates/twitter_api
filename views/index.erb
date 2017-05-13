@@ -1,0 +1,14 @@
+<h3>Twitter Practice!</h3>
+
+<form class="twitter" action="index.html" method="post">
+  <label for="user">twitter handle</label>
+  <br>
+  <input type="text" name="user">
+  <br>
+  <label for="count">how many most recent tweets to view</label>
+  <br>
+  <input type="number" name="count" max="50">
+  <button type="submit" name="button">find their tweets</button>
+</form>
+
+<% @tweets.each {|tweet| puts tweet.full_text } %>
