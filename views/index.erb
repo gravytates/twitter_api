@@ -12,9 +12,11 @@
 </form>
 
 <% @tweets.each do |tweet| %>
-  <p><%= tweet.name %>: <%= tweet.tweet %></p>
+  <p><b><%= tweet.name %>:</b> <%= tweet.tweet %></p>
+  <p>retweets: <%= tweet.retweet %></p>
   <form class="" action="/tweet/<%= tweet.id %>/delete" method="post">
     <input type="hidden" name="_method" value="delete">
     <button class="btn btn-danger" href="/">delete</button>
   </form>
+  <hr>
 <%end%>

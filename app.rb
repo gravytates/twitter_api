@@ -21,10 +21,10 @@ post '/tweets' do
   @count = params['count'].to_i
   @user = params['user']
   tweets = client.user_timeline(@user, count: @count)
-  sweetweet = []
-  tweets.each {|tweet| sweetweet.push(tweet.full_text) }
-  sweetweet.each {|t| Tweet.create({tweet: t, name: @user})}
+  sweetweets = Hash.new
+  tweets.each {|tweet| sweetweets.store(tweet.full_text, tweet.retweet_count) }
   # binding.pry
+  sweetweets.each {|t, r| Tweet.create({tweet: t, retweet: r, name: @user})}
   redirect '/'
 end
 
