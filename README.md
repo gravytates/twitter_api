@@ -1,21 +1,24 @@
-# <!--PROJECT NAME HERE-->
+# Twitter API
 
-<!--PROJECT DESCRIPTION HERE-->
+API practice using ruby and twitter to view tweets amount of retweets by any user.
+
+![Image of screenshot](public/img/screenshot.png)
 
 ### Prerequisites
 
 Web browser with ES6 compatibility
 Examples: Chrome, Safari
 
-Ruby <!--VERSION HERE-->
+Ruby
 Bundler
 
 ### Installing
 
-Installation is quick and easy! First you can open this link <!--HEROKU LINK HERE--> to see the webpage in action live online. Or you can clone this repository to your machine, navigate to the file path in your terminal, and run 'app.rb' by typing '$ruby app.rb'. If you chose to clone the repository, after you run 'app.rb' you will need to copy the localhost path into your web browser. The standard localhost for Sinatra is port 4567
+You can clone this repository to your machine, navigate to the file path in your terminal, and run 'app.rb' by typing '$ruby app.rb'. If you chose to clone the repository, after you run 'app.rb' you will need to copy the localhost path into your web browser. The standard localhost for Sinatra is port 4567
 
 ## Built With
 
+* Twitter
 * Ruby
 * Sinatra
 * HTML
@@ -24,15 +27,16 @@ Installation is quick and easy! First you can open this link <!--HEROKU LINK HER
 * ES6
 * Jquery https://jquery.com/
 
+
 ## Authors
 
-* <!--YOUR NAME HERE-->
+* Grady L Shelton
 
 ## License
 
 MIT License
 
-Copyright (c) <!--YOUR NAME & YEAR HERE-->
+Copyright (c) Grady L Shelton 2017
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -51,4 +55,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
