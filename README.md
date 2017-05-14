@@ -14,7 +14,26 @@ Bundler
 
 ### Installing
 
-You can clone this repository to your machine, navigate to the file path in your terminal, and run 'app.rb' by typing '$ruby app.rb'. If you chose to clone the repository, after you run 'app.rb' you will need to copy the localhost path into your web browser. The standard localhost for Sinatra is port 4567
+Clone this repo by typing into the terminal:
+```
+$ git clone https://github.com/gravytates/twitter_api.git
+```
+
+In a new terminal window, start postgres in the background:
+```
+$ postgres
+```
+
+Navigate to this project directory in the terminal. Then type:
+```
+$ rake db:schema:load
+```
+
+In a new terminal tab, start the sinatra server by typing:
+```
+$ruby app.rb
+```
+Sinatra will now make this project available in your browser by going to localhost:4567.
 
 ## Built With
 
