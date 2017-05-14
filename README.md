@@ -1,6 +1,6 @@
 # Twitter API
 
-API practice using ruby and twitter to view tweets amount of retweets by any user.
+Simple API practice using ruby and twitter to view tweets and amount of retweets by any user.
 
 ![Image of screenshot](public/img/screenshot.png)
 
