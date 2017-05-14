@@ -23,8 +23,14 @@ post '/tweets' do
   tweets = client.user_timeline(@user, count: @count)
   sweetweet = []
   tweets.each {|tweet| sweetweet.push(tweet.full_text) }
-  sweetweet.each {|t| Tweet.create({tweet: t})}
+  sweetweet.each {|t| Tweet.create({tweet: t, name: @user})}
   # binding.pry
+  redirect '/'
+end
+
+delete '/tweet/:id/delete' do
+  tweet = Tweet.find(params['id'].to_i)
+  tweet.delete
   redirect '/'
 end
 

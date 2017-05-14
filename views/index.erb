@@ -5,12 +5,16 @@
   <br>
   <input type="text" name="user">
   <br>
-  <label for="count">how many most recent tweets to view</label>
+  <label for="count">how many recent tweets to view</label>
   <br>
   <input type="number" name="count" max="50">
   <button type="submit" name="button">find their tweets</button>
 </form>
 
 <% @tweets.each do |tweet| %>
-  <p>Tweet: <%= tweet.tweet %></p>
+  <p><%= tweet.name %>: <%= tweet.tweet %></p>
+  <form class="" action="/tweet/<%= tweet.id %>/delete" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <button class="btn btn-danger" href="/">delete</button>
+  </form>
 <%end%>
