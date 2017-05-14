@@ -1,6 +1,6 @@
 <h3>Twitter Practice!</h3>
 
-<form class="twitter" action="index.html" method="post">
+<form class="twitter" action="/tweets" method="post">
   <label for="user">twitter handle</label>
   <br>
   <input type="text" name="user">
@@ -11,4 +11,6 @@
   <button type="submit" name="button">find their tweets</button>
 </form>
 
-<% @tweets.each {|tweet| puts tweet.full_text } %>
+<% @tweets.each do |tweet| %>
+  <p>Tweet: <%= tweet.tweet %></p>
+<%end%>

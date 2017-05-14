@@ -1,6 +1,6 @@
 development:
   adapter: postgresql
-  database: twitter_api_practice_development
+  database: twitter_development
 test:
   adapter: postgresql
-  database: twitter_api_practice_test
+  database: twitter_test
