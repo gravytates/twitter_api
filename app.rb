@@ -13,7 +13,7 @@ end
 
 get "/" do
   @tweets = Tweet.all
-  # binding.pry
+  @count = 0
   erb :index
 end
 
@@ -23,7 +23,6 @@ post '/tweets' do
   tweets = client.user_timeline(@user, count: @count)
   sweetweets = Hash.new
   tweets.each {|tweet| sweetweets.store(tweet.full_text, tweet.retweet_count) }
-  # binding.pry
   sweetweets.each {|t, r| Tweet.create({tweet: t, retweet: r, name: @user})}
   redirect '/'
 end
@@ -31,6 +30,12 @@ end
 delete '/tweet/:id/delete' do
   tweet = Tweet.find(params['id'].to_i)
   tweet.delete
+  redirect '/'
+end
+
+delete '/clear_tweets' do
+  tweets = Tweet.all
+  tweets.each {|t| t.delete }
   redirect '/'
 end
 
